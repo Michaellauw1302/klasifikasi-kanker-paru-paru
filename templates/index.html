@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+<title>klasfikasi kanker paru</title>
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5  ">
+  <center>
+    <h1 class="text-white mb-5 fw-bold">Klasifikasi Kanker Paru-Paru</h1>
+  </center>
+
+
+
+  <form class="form-control mb-5" action="/" method="POST">
+    <div class="container">
+      <div class="mb-3 mt-3">
+        <label class="form-label  fw-bold text-primary fs-3">jenis Kelamin</label>
+        <select name="jk" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+          <option selected>Jenis Kelamin</option>
+          <option value="1">Laki-Laki</option>
+          <option value="0">Perempuan</option>
+        </select>
+        <!-- <label class="form-label fw-bold text-primary">Jenis Kelamin</label>
+      <input type="text" class="form-control" id="jk" name="jk"> -->
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label  fw-bold text-primary fs-3">Umur</label>
+        <input type="text" class="form-control fs-3" id="umur" name="umur" aria-describedby="emailHelp">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label  fw-bold text-primary fs-3">Apakah Merokok ?</label>
+        <select name="rokok" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+          <option selected>--Option--</option>
+          <option value="1">Ya</option>
+          <option value="0">Tidak</option>
+        </select>
+      </div>
+      <!-- select -->
+
+
+      <div class="mb-3">
+        <label class="form-label  fw-bold text-primary fs-3">Jari Berwarna Kuning</label>
+        <select name="jari" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+          <option selected>--Option--</option>
+          <option value="1">Ya</option>
+          <option value="0">Tidak</option>
+        </select>
+
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label  fw-bold text-primary fs-3">Anxiety</label>
+        <select name="anxiety" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+          <option selected>--Option--</option>
+          <option value="1">Ya</option>
+          <option value="0">Tidak</option>
+        </select>
+      </div>
+
+
+      <div class="mb-3">
+        <label class="form-label  fw-bold text-primary fs-3">PEER PRESSURE</label>
+        <select name="peer" id="peer" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+          <option selected>--Option--</option>
+          <option value="1">Ya</option>
+          <option value="0">Tidak</option>
+        </select>
+      </div>
+
+
+      <div class="mb-3">
+        <label class="form-label  fw-bold text-primary fs-3">Penyakit Kronis</label>
+        <select name="kronis" id="kronis" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+          <option selected>--Option--</option>
+          <option value="1">Ya</option>
+          <option value="0">Tidak</option>
+        </select>
+      </div>
+
+
+      <div class="mb-3">
+        <label class="form-label  fw-bold text-primary fs-3">Fatigue</label>
+        <select name="fatigue" id="fatigue" class="form-select form-select-lg mb-3"
+          aria-label=".form-select-lg example">
+          <option selected>--Option--</option>
+          <option value="1">Ya</option>
+          <option value="0">Tidak</option>
+        </select>
+      </div>
+
+
+      <div class="mb-3">
+        <label class="form-label  fw-bold text-primary fs-3">Alergi</label>
+        <select id="alergi" name="alergi" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+          <option selected>--Option--</option>
+          <option value="1">Ya</option>
+          <option value="0">Tidak</option>
+        </select>
+      </div>
+
+
+      <div class="mb-3">
+        <label class="form-label  fw-bold text-primary fs-3">Nafas Berbunyi</label>
+        <select id="nafas" name="nafas" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+          <option selected>--Option--</option>
+          <option value="1">Ya</option>
+          <option value="0">Tidak</option>
+        </select>
+      </div>
+
+
+      <div class="mb-3">
+        <label class="form-label  fw-bold text-primary fs-3">Konsumsi Alkohol</label>
+        <select id="alkohol" name="alkohol" class="form-select form-select-lg mb-3"
+          aria-label=".form-select-lg example">
+          <option selected>--Option--</option>
+          <option value="1">Ya</option>
+          <option value="0">Tidak</option>
+        </select>
+      </div>
+
+
+      <div class="mb-3">
+        <label class="form-label fw-bold text-primary fs-3">Batuk</label>
+        <select id="batuk" name="batuk" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+          <option selected>--Option--</option>
+          <option value="1">Ya</option>
+          <option value="0">Tidak</option>
+        </select>
+      </div>
+
+
+      <div class="mb-3">
+        <label class="form-label fw-bold text-primary fs-3">Sesak Nafas</label>
+        <select id="sesak" name="sesak" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+          <option selected>--Option--</option>
+          <option value="1">Ya</option>
+          <option value="0">Tidak</option>
+        </select>
+      </div>
+
+
+      <div class="mb-3">
+        <label class="form-label fw-bold text-primary fs-3">Susah Menelan</label>
+        <select id="susah_telan" name="susah_telan" class="form-select form-select-lg mb-3"
+          aria-label=".form-select-lg example">
+          <option selected>--Option--</option>
+          <option value="1">Ya</option>
+          <option value="0">Tidak</option>
+        </select>
+      </div>
+
+
+      <div class="mb-3">
+        <label class="form-label fw-bold text-primary fs-3">Sakit Dada</label>
+        <select id="dada" name="dada" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+          <option selected>--Option--</option>
+          <option value="1">Ya</option>
+          <option value="0">Tidak</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>
+
+{% endblock %}
